@@ -1,0 +1,144 @@
+<html>
+    <h1>What is OOP?</h1>
+        <li>It is a style of coding</li>
+        <!--
+            the another style may be the more common approach: procudural
+            If youve created your own scripts, then your're probably use to writing procedural code.
+            What this is means is that you wrote code that executes line by line.
+            OOP doesnt exactly execute line by line, you execute in any order that you specifiy.
+            there is still a central script in oop, where we are going to be calling everything.
+            but you will see we are punting responsibilites to different files, which will hold different classes.
+        -->
+        <li>It is about organizing code differently</li>
+        <!--
+            we group similar properties and functions and tasks into a single place called classes.
+            by doing this we can much more simply dictate the order in which or scripts progress.
+        -->
+        <h1> Why OOP?</h1>
+
+        <li>It is easier to follow the tenet "DRY"</li>
+        <!--
+            Do Not Repeat Yourself!
+            Which basically just means, at no point should we be coding the same block of code over and over
+            again. Well in OOP its just simply easier to do this without issues.
+        -->
+        <li>It is easier to maintain</li>
+        <!--
+            One mayjor benifit of DRY programming and OOP, is that if a peice of information changes in your program,
+            USUALLY, only one change is required to update the code. A big problem faced in developing can often be
+            with maintaing code where data is declared over and over again, in different places. And that means you'll
+            need to make changes to each and everyone to fix the bug.
+        -->
+        <li>It is easier to deal with data</li>
+        <!--
+            Because an object can store data internally, variables dont needd to be passed from function to function
+            properly.
+        -->
+        <li>Better Organization</li>
+        <!--
+            classes can be neatly and easily packaged and cataloged. we will see how each class can generally
+            be kept in its own separate file. Which also lends itself to being more portable, extensible and reusable.
+        -->
+        <li>Allows for standards to be set up</li>
+        <!--
+            This organization leads to a standardization right. It allows us all to work together more easily.
+            Because we can all expect certain functions or classes to be in the same places.
+        -->
+    <h1>Vocabulary</h1>
+
+        <li>Class: A blueprint of data</li>
+            <!--
+                completely analogous to a blueprint of a house. It defines the shape of the house on paper,
+                maybe it details the relationships between different parts of the house in a clearly and planned out way,
+                event though house doesnt exists yet. Classes form the structure of data and actions and use that information to build objects
+                More than one object can be built from the same class at the same time, each one independent of the
+                others. Continuing with our construction analogy, it's similar to the way an entire subdivision can
+                be built from the same blueprint: 150 different houses that all look the same but have different families
+                and decorations inside.
+                -->
+        <li>Object: an instance of a classes blueprint</li>
+        <!--
+            This would be the actual house, built according to that same blueprint
+        -->
+
+    <h1>Structuring classes</h1>
+        <li>
+            The syntax to create a class is pretty straightforward:
+            declare a class using the class keyword, followed by the name of the class and a set of curly braces
+        </li>
+        <li>
+            After creating the class, a new class can be instantiated and stored in a variable using the new keyword:
+        </li>
+        <li>
+            What we are doing is taking the instance of the class and storing it in a variable.
+        </li>
+        <li>
+            By doing this, we can access that instance and manipulate it any way we want. Like anything else,
+            we can name our variable anything we want.
+        </li>
+        <li>
+            Variables == Properties
+            <!--Work just like regular variables, and functions but they are now tied to a class or object
+            they can only be accessed from that object-->
+        </li>
+        <li>
+            Functions == Methods
+        </li>
+
+    <h1>Using Properties and Methods</h1>
+        <li>Specify the accessibility/visibility</li>
+        <li> If we want to access the variable in our class, we first use the variable that contains the instance of this class. </li>
+        <li> We then use the object operator, ->, to specify that we want to grab something inside this class. </li>
+        <!--
+            We can have multiple insances of a class right, so if  the indivicual object, is not refrenced. the script
+            will be unable to determine which object to read from
+        -->
+        <li>The $ is omitted when you are trying to access a variable inside of a class.</li>
+        <li>we use the $this property to reference the one we defined in our class.</li>
+    <h1>Inhertance and Extending classes</h1>
+        <li>Extending a class from another, means the child will have access(aka inherits) all the properties and methods of the parent</li>
+        <li>The child will be able to use any methods or properties that the parent had, but it will be their own</li>
+        <li> they can even modify it, change it, without affecting the parent at all</li>
+        <!-- By extending classes, we give other developers the opportunity to manipulate our
+         class any way we want without harming the structure of the original class. It also makes
+         code less cluttered and easier to manage.
+         -->
+    <h1>Encapsulation</h1>
+        <li>It is a way to define the visibility of our prooperties and methods</li>
+        <li>When you’re creating classes, you have to ask yourself what properties and methods can be accessed outside of the class. </li>
+        <li>Public: means the variable can be accesssed outside fo our class</li>
+        <li>Private: the variable cannot be accessed outside of the class, not even classes that extend it</li>
+        <li>Protected: allows our properties and methods to be accessed only by the author class or classes that extend it. </li>
+    <h1>Magic Methods</h1>
+    <li><a href="http://php.net/manual/en/language.oop5.magic.php">Magic</a></li>
+    <li>__construct() : Whenever someone creates an object of your class, PHP will search
+        for a constructor method to run. If it finds one, then it will run that method when an object is created. </li>
+    <h1>Scope Resolution Operator</h1>
+    <li> Allows you to access static, constant, or overridden methods and properties of a class. </li>
+    <li>
+        Constants are variables that do not change value during the lifetime of a program. Defining constants in
+        classes are a bit different than defining constants outside of a class. Even though constants can only be
+        1 value for the entire program. They can change values if a class extends a class with a constant.
+    </li>
+    <li>
+        Anything that is static is basically something that can be accessed without needing an instantiation of the class.
+        You also have the advantage of having a value that is consistent through each instance of the class.
+        You can also access these properties or methods without instantiation
+    </li>
+    <li> parent key word refers to the parent class; self key work referes to the current class; $this key word refers to the current object</li>
+
+    <h1>Polymorphism</h1>
+    <li>Patern in OOp, in which classes have differetn functionality while sharing a common interface</li>
+    <li>Like a contract</li>
+    <li> Two contructs are used in php to create this common interface: abstract classes and interfaces</li>
+    <li>Abstract Classes vs Interfaces</li>
+    <ul>
+        <li><span style="line-height: 13px;">Methods in abstract classes can be defined abstract or just a regular method. If a method is abstract, then that method must be defined in the class that extends it. In interfaces, <strong>ALL</strong> methods are abstract, therefore all methods must be defined in the class that implements them.</span></li>
+        <li>You’re allowed to define your methods as public, private, or protected in abstract classes. In interfaces, <strong>ALL</strong> methods <strong>MUST</strong> be public.</li>
+        <li>In abstract classes, you’re allowed to create methods and properties with values and concrete code in them as long as they’re not defined as abstract. Interfaces <strong>CAN NOT</strong> contain properties and methods <strong>CAN NOT</strong> have a body.</li>
+        <li>A class can only extend 1 abstract class, but a class can implement an infinite amount of interfaces even if the interfaces don’t relate to one another.</li>
+        <li>You have the option to override methods in an abstract class, but you <strong>MUST</strong> override <strong>ALL</strong> methods in an interface.</li>
+    </ul>
+    <h1>Type hinting</h1>
+    <li>Type hinting allows you to specify the type of data the method is expecting to accept.</li>
+</html>
